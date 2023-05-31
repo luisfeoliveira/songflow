@@ -7,6 +7,8 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import logoImage from "./src/images/splash_logo.png";
 import Constants from "expo-constants";
 import * as Font from "expo-font";
+import { ThemeProvider } from "styled-components";
+import { GeneralTheme } from "./src/styles/theme";
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
@@ -19,14 +21,6 @@ export default function App() {
 }
 
 const Stack = createNativeStackNavigator();
-
-const AppTheme = {
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    background: "rgb(245, 244, 255)",
-  },
-};
 
 const AnimatedAppLoader = ({ children }: any) => {
   return <AnimatedSplashScreen>{children}</AnimatedSplashScreen>;
@@ -112,10 +106,12 @@ const MainScreen = () => {
   const scheme = useColorScheme();
 
   return (
-    <NavigationContainer theme={AppTheme}>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Home" component={Home} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <ThemeProvider theme={GeneralTheme}>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Home" component={Home} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </ThemeProvider>
   );
 };
