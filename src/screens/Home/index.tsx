@@ -1,14 +1,20 @@
 import React from "react";
 import { Image, View, Text, ImageSourcePropType } from "react-native";
-import { logo } from "../../images/logo.png";
+import LogoImage from "../../images/logo.png";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Home: React.FC = () => {
-  const imageSource: ImageSourcePropType = logo;
+  const imageSource: ImageSourcePropType = LogoImage;
+
   return (
-    <View>
-      <Image source={imageSource} />
-      <Text>dadas</Text>
-    </View>
+    <SafeAreaView>
+      <Image
+        source={imageSource}
+        style={{ width: "40%" }}
+        resizeMode="contain"
+      />
+      <Text>Home page</Text>
+    </SafeAreaView>
   );
 };
 
