@@ -1,9 +1,25 @@
 import { DefaultTheme } from "styled-components";
-
-const GeneralTheme: DefaultTheme = {
+interface CustomTheme extends DefaultTheme {
   colors: {
-    primary: "",
-    secondary: "",
+    primary: string;
+    secondary: string;
+    white: string;
+    black: string;
+    background: string;
+  };
+  fonts: {
+    regular: string;
+    bold: string;
+    light: string;
+    medium: string;
+    semibold: string;
+  };
+}
+
+const GeneralTheme: CustomTheme = {
+  colors: {
+    primary: "#8D4FCB",
+    secondary: "#4C7DFA",
     white: "#FFFFFF",
     black: "#424242",
     background: "#F5F4FF",
