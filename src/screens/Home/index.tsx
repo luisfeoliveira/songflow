@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import Avatar from "../../components/Avatar";
 import { Header } from "./styles";
+import SearchInput from "../SearchInput";
 
 const Home: React.FC = () => {
   const imageSource: ImageSourcePropType = LogoImage;
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
         />
         <View style={{ width: 45 }}></View>
       </Header>
+      <SearchInput />
     </SafeAreaView>
   );
 };
