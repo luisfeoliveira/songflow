@@ -3,7 +3,7 @@
 </p>
 
 
-SongFlow is a mobile app designed to help bands, musical groups, and performers manage their setlists. With SongFlow, you can easily create, organize, and update setlists for your live performances, rehearsals, or any musical event.
+SongFlow is a mobile app designed to help bands, musical groups, and performers manage their setlists. With SongFlow, you can easily create, organize, and update setlists for your live performances, rehearsals, or any musical events.
 
 ## Features
 
